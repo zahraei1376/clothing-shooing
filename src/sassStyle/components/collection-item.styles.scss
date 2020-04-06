@@ -1,0 +1,39 @@
+.Collection{
+    &_item{
+
+        width: 22%;
+        display: flex;
+        flex-direction: column;
+        height: 20rem;
+        // height: 35rem;
+        align-items: center;
+
+        &-img{
+            width: 100%;
+            height: 95%;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 5px;
+            // object-fit: cover;
+
+        }
+
+        &-footer{
+
+            width: 100%;
+            height: 5%;
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+
+            &-name{
+                width: 90%;
+                margin-bottom: 1.5rem;
+            }
+
+            &-price{
+                width: 10%;
+            }
+        }
+    }
+}
