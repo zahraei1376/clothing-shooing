@@ -13,8 +13,8 @@ const Navigation=()=>(
         <nav className='navigation__nav'>
             <ul className='navigation__list'>
                 <li className='navigation__item'><Link to='shop' className='navigation__link'>Shop</Link></li>
-                <li className='navigation__item'><Link to='shop' className='navigation__link'>Shop</Link></li>
-                <li className='navigation__item'><Link to='shop' className='navigation__link'>Shop</Link></li>
+                <li className='navigation__item'><Link to='shop' className='navigation__link'>contact</Link></li>
+                <li className='navigation__item'><Link to='shop' className='navigation__link'>sign in</Link></li>
             </ul>
         </nav>
     </div>

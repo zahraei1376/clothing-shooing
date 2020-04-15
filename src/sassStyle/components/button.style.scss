@@ -1,0 +1,23 @@
+.btn{
+    min-width: 16.5rem;
+    width: auto;
+    height: 5rem;
+    padding:0 3.5rem 0 3.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+
+    &-black{
+        color: white;
+        background-color: black;
+
+        &:hover{
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+        }
+    }
+}

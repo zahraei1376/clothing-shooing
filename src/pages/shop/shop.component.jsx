@@ -12,7 +12,7 @@ class ShopPage extends React.Component{
     }
 
     render(){
-        const {collections,Links}=this.state;
+        const {collections}=this.state;
         return (
             <div>
                 

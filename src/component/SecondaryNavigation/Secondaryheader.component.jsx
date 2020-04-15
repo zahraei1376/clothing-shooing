@@ -14,7 +14,7 @@ const Secondaryheader=()=>(
         <div className='header__options'>
             <Link to='/shop' className='header__option'>shop</Link>
             <Link to='/shop' className='header__option'>contact</Link>
-            <Link to='/shop' className='header__option'>shop</Link>
+            <Link to='/signin' className='header__option'>sign in</Link>
         </div>
     </div>
 );

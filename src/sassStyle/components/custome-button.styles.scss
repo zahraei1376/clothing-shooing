@@ -1,0 +1,56 @@
+.customButton {
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    display: inline-block;
+    transition: all .2s;
+    opacity: 1;
+    position: relative;
+    background-color: white;
+
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha:.2);
+    }
+
+    &:hover::after{
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color: #000000, $alpha:.2);
+    }
+
+    &::after{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &-black{
+        color: white;
+        background-color:black;
+    }
+
+    &-black::after{
+        background-color: black;
+    }
+
+    &-blue{
+        color: white;
+        background-color: blue;
+    }
+
+    &-blue::after{
+        background-color: blue;
+    }
+}

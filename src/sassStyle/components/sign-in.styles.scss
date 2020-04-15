@@ -1,0 +1,14 @@
+.sign-in{
+    width:30vw;
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        font-size: 1.4rem;
+    }
+
+    &__subtitle{
+        display: block;
+        font-size: 1rem;
+    }
+}
