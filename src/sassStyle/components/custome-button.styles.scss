@@ -16,6 +16,7 @@
     &:hover::after{
         transform: scaleX(1.4) scaleY(1.6);
         opacity: 0;
+        backface-visibility: hidden;
     }
 
     &:active{
@@ -47,10 +48,19 @@
 
     &-blue{
         color: white;
-        background-color: blue;
+        background-color: #4285f4;
     }
 
     &-blue::after{
-        background-color: blue;
+        background-color: #4285f4;
     }
+
+    // &.google-sign-in{
+    //     background-color: #4285f4;
+    //     color: white;
+
+    //     // &:hover .customButton:hover::after{
+
+    //     // }
+    // }
 }

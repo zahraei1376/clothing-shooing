@@ -1,7 +1,7 @@
 import React from 'react';
 import ShopData from './shopData';
 import CollectionPreview from '../../component/preview-collction/preview-collection.component';
-import Secondaryheader from '../../component/SecondaryNavigation/Secondaryheader.component';
+// import Secondaryheader from '../../component/SecondaryNavigation/Secondaryheader.component';
 
 class ShopPage extends React.Component{
     constructor(props){
@@ -16,7 +16,7 @@ class ShopPage extends React.Component{
         return (
             <div>
                 
-                <Secondaryheader/>
+                {/* <Secondaryheader/> */}
                 
                 <div className="shopPage">
                     {collections.map(({id, ...othercollectionprops})=>(
