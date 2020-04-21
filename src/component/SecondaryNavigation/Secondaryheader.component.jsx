@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 import '../../sassStyle/components/Secondaryheader.styles.scss';
 import {auth} from '../../firebase/firebase.utils';
 import {connect} from 'react-redux';
+import CardIcon from '../card-icon/card-icon.component';
+import Cart from '../cart-dropdown/cart-dropdown.component';
 
 class Secondaryheader extends React.Component{
     // constructor(props){
@@ -40,19 +42,33 @@ class Secondaryheader extends React.Component{
                     <Link to='/shop' className='header__option'>contact</Link>
                     {/* <Link to='/signin' className='header__option'>sign in</Link> */}
                     {
-                        this.state.currentUser?
+                        this.props.currentUser?
                         <div className='header__option' onClick={()=>auth.signOut()}>SIGN OUT</div>
                         :
                         <Link to='/signin' className='header__option'>sign in</Link>
                     }
+                    <CardIcon/>
+                    
                 </div>
+
+                {
+                    this.props.hidden ?
+                    null
+                    :
+                    <Cart/>
+                }
             </div>
         )
     }
 }
 
-const mapStateToProps=(state)=>({
-    currentUser:state.user.currentUser
+// const mapStateToProps=(state)=>({
+//     currentUser:state.user.currentUser
+// })
+
+const mapStateToProps=({user:{currentUser},cart:{hidden} })=>({
+    currentUser,
+    hidden
 })
 
 export default connect(mapStateToProps)(Secondaryheader);

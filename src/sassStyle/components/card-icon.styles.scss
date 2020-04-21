@@ -1,0 +1,29 @@
+@import '../abstracts/variables';
+
+.cardIcon{
+    position: relative;
+    cursor: pointer;
+
+    &__icon{
+        width: 2.25rem;
+        height: 2.25rem;
+        fill: $color-dark-dark-2;
+    }
+
+    &__itemCount{
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: $color-primary;
+        // background-color: var(red);
+        color: #fff;
+        position: absolute;
+        top: -.5rem;
+        right: -1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

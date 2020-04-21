@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import HomePage from './pages/homepage.component';
 import ShopData from './pages/shop/shop.component';
 import SignInSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
-import PrimaryHeader from './component/Primaryheader/Primaryheader.component';
+// import PrimaryHeader from './component/Primaryheader/Primaryheader.component';
 import {setCurrentUser} from './redux/user/user.action';
 
 class App extends React.Component {
@@ -35,7 +35,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <PrimaryHeader />
+        {/* <PrimaryHeader /> */}
         <Switch>
           <Route exact path='/' component={HomePage}/>
           <Route exact path='/shop' component={ShopData}/>
