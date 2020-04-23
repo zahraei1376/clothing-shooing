@@ -13,6 +13,8 @@
     flex-direction: column;
     z-index: 5;
 
+    transition: all .6s;
+
     &__items{
         height: 14rem;
         display: flex;

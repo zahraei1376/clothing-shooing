@@ -20,4 +20,16 @@
             border: 1px solid black;
         }
     }
+
+    
+    &-white{
+        color: black;
+        background-color: white;
+
+        &:hover{
+            color: white;
+            background-color: black;
+            border: none;
+        }
+    }
 }
