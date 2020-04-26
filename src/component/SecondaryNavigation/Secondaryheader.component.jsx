@@ -1,11 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { createStructuredSelector} from 'reselect';
 // import Secondarynavigation from './Secondarynavigation.component';
 import '../../sassStyle/components/Secondaryheader.styles.scss';
 import {auth} from '../../firebase/firebase.utils';
 import {connect} from 'react-redux';
 import CardIcon from '../card-icon/card-icon.component';
 import Cart from '../cart-dropdown/cart-dropdown.component';
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 class Secondaryheader extends React.Component{
     // constructor(props){
@@ -61,14 +64,24 @@ class Secondaryheader extends React.Component{
         )
     }
 }
-
+////////////////////////////////////////////////
 // const mapStateToProps=(state)=>({
 //     currentUser:state.user.currentUser
 // })
-
-const mapStateToProps=({user:{currentUser},cart:{hidden} })=>({
-    currentUser,
-    hidden
+////////////////////////////////////////////////
+// const mapStateToProps=({user:{currentUser},cart:{hidden} })=>({
+//     currentUser,
+//     hidden
+// })
+////////////////////////////////////////////////
+// const mapStateToProps=(state)=>({
+//     currentUser:selectCurrentUser(state),
+//     hidden:selectCartHidden(state)
+// })
+////////////////////////////////////////////////
+const mapStateToProps = createStructuredSelector({
+    currentUser:selectCurrentUser,
+    hidden:selectCartHidden
 })
 
 export default connect(mapStateToProps)(Secondaryheader);

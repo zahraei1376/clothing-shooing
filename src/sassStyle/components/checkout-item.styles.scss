@@ -1,0 +1,39 @@
+.checkOutItem{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &__imageContainer{
+        width: 25%;
+        padding-right: 1.5rem;
+
+        img{
+            width: 90%;
+            height: 100%;
+            padding: 1rem 1rem 1rem 0;
+        }
+
+    }
+    &__name,
+    &__quantity,
+    &__price{
+        width: 22%;
+    }
+    &__quantity{
+        display: flex;
+        &-arrow{
+            cursor: pointer;
+        }
+
+        &-value{
+            margin: 0 1rem;
+        }
+    }
+    // &__price{
+
+    // }
+    &__removeButton{
+        cursor: pointer;
+    }
+}

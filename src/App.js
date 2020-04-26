@@ -9,6 +9,8 @@ import ShopData from './pages/shop/shop.component';
 import SignInSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 // import PrimaryHeader from './component/Primaryheader/Primaryheader.component';
 import {setCurrentUser} from './redux/user/user.action';
+import CheckoutPage from './pages/checkout/checkout.component';
+
 
 class App extends React.Component {
   constructor(props){
@@ -38,7 +40,8 @@ class App extends React.Component {
         {/* <PrimaryHeader /> */}
         <Switch>
           <Route exact path='/' component={HomePage}/>
-          <Route exact path='/shop' component={ShopData}/>
+          <Route path='/shop' component={ShopData}/>
+          <Route exact path='/checkout' component={CheckoutPage} />
           <Route exact path='/signin' render={()=>
             this.props.currentUser ? (
             <Redirect to='/'/>
