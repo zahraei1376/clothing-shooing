@@ -4,10 +4,16 @@
     position: relative;
     cursor: pointer;
 
-    &__icon{
+    &__container{
         width: 2.25rem;
         height: 2.25rem;
-        fill: $color-dark-dark-2;
+
+        &-icon{
+            // width: 2.25rem;
+            // height: 2.25rem;
+            transform: scale(1.7);
+            fill: $color-dark-dark-2;
+        }
     }
 
     &__itemCount{

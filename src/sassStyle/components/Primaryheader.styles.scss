@@ -1,17 +1,18 @@
+@import '../abstracts/variables';
+
 .header{
+    display: flex;
     position: relative;
     
-    // &_container{
-    //     position: absolute;
-    //     top: 3rem;
-    //     left: 3rem;
-
-    // }
-
     &_logo{
-        width: 4rem;
+        width:4rem ;
+        fill:$color-primary;
         position: absolute;
-        top: 3rem;
+        top: 0;
         left: 3rem;
+
+        &-path{
+            transform: scale(2.5);
+        }
     }
 }

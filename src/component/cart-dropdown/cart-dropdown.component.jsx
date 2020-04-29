@@ -6,7 +6,7 @@ import '../../sassStyle/components/cart-dropdown.styles.scss';
 import CustomButton2 from '../../component/custome-button2/custome-button2.component';
 import CartItem from '../cart-item/cart-item.component';
 import { selectCartItem } from '../../redux/cart/cart.selectors';
-import { ToggleCardHidden} from '../../redux/cart/cart.action';
+import ToggleCardHidden from '../../redux/cart/cart.action';
 
 
 const Cart=({CartItems , history, dispatch})=>(
@@ -23,7 +23,7 @@ const Cart=({CartItems , history, dispatch})=>(
         </div>
         <CustomButton2  color='black' onClick={()=>{
             history.push('/checkout')
-            // dispatch(ToggleCardHidden())
+            dispatch(ToggleCardHidden())
             }}>GO TO CHECKOUT</CustomButton2>
         {/* <CustomButton color='black' className='card__btn'>GO TO CHECKOUT</CustomButton> */}
     </div>

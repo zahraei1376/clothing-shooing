@@ -13,9 +13,5 @@ const Secondarynavigation=({linkk,text})=>(
             </div>
         </div> */}
     </div>
-    
-   
 );
-
-
 export default Secondarynavigation;
