@@ -10,6 +10,7 @@ import Cart from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 
+
 class Secondaryheader extends React.Component{
     // constructor(props){
     //     super(props);
@@ -42,7 +43,6 @@ class Secondaryheader extends React.Component{
                 <div className='header__options'>
                     <Link to='/shop' className='header__option'>shop</Link>
                     <Link to='/shop' className='header__option'>contact</Link>
-                    {/* <Link to='/signin' className='header__option'>sign in</Link> */}
                     {
                         this.props.currentUser?
                         <div className='header__option' onClick={()=>auth.signOut()}>SIGN OUT</div>

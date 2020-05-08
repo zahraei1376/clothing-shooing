@@ -11,7 +11,7 @@ const CollectionItem=({item,addItem})=>{
             <div className='Collection_item-img' style={{backgroundImage:`url(${imageUrl})`}}></div>
             <div className='Collection_item-footer'>
                 <span className='Collection_item-footer-name'>{name}</span>
-                <span className='Collection_item-footer-price'>{price}</span>
+                <span className='Collection_item-footer-price'>{price}$</span>
             </div>
             <CustomButton2 onClick={()=>addItem(item)} color='white'>add to cart</CustomButton2>
         </div>
