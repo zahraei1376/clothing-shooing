@@ -23,14 +23,14 @@ export const selectCollectionsForPreview =createSelector(
 // export const selectCollection = collectionUrlparam =>(
 //     createSelector(
 //         [selectCollections],
-//         collections = collections[collectionUrlparam] //=>serach by object
+//         collections => collections[collectionUrlparam] //=>serach by object
 //         // collections => collections.find( collection => collection.id === COLLECTION_ID_MAP[collectionUrlparam ]) =>serach by array
 //     )
 // )
 
 export const selectCollection = collectionUrlparam =>(
     createSelector(
-        [selectCollectionsForPreview],
-        collections = collections[collectionUrlparam]
+        [selectCollections],
+        collections => collections[collectionUrlparam]
     )
 )
