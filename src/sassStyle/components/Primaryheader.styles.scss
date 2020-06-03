@@ -4,12 +4,18 @@
     display: flex;
     position: relative;
     
-    &_logo{
-        width:4rem ;
+    &_logo {
+
         fill:$color-primary;
         position: absolute;
         top: 0;
         left: 3rem;
+
+        @media screen and (max-width:37.5em){
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
         &-path{
             transform: scale(2.5);

@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.scss';
+import {GlobalStyle} from './global.styles';
+
 import {Switch,Route,Redirect} from 'react-router-dom';
 import {auth} from './firebase/firebase.utils';
 import {connect} from 'react-redux';
@@ -10,6 +11,7 @@ import SignInSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.compon
 // import PrimaryHeader from './component/Primaryheader/Primaryheader.component';
 import {setCurrentUser} from './redux/user/user.action';
 import CheckoutPage from './pages/checkout/checkout.component';
+
 
 
 class App extends React.Component {
@@ -37,6 +39,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
+        <GlobalStyle/>
         {/* <PrimaryHeader /> */}
         <Switch>
           <Route exact path='/' component={HomePage}/>

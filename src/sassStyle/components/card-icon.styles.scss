@@ -14,6 +14,10 @@
             transform: scale(1.7);
             fill: $color-dark-dark-2;
         }
+
+        @media screen and (max-width:37.5em){
+            transform: scale(1);
+        }
     }
 
     &__itemCount{

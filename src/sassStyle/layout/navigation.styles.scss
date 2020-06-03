@@ -19,6 +19,11 @@
         outline: none;
         text-align: center;
         cursor: pointer;
+        @media screen and (max-width:37.5em){
+            position: fixed;
+            right: 2.6rem;
+            top: 1.6rem;
+        }
     }
 
     &__background{
@@ -33,6 +38,11 @@
         outline: none;
         transition: transform .8s cubic-bezier(.54,.19,.3,.7);
         // transform: scale(60);
+        @media screen and (max-width:60em){
+            position: fixed;
+            right: 3rem;
+            top: 2rem;
+        }
     }
 
     &__nav{

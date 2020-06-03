@@ -3,11 +3,20 @@ import Directory from '../component/directory/directiry.component';
 import '../sassStyle/pages/homepage.style.scss';
 import PrimaryHeader from '../component/Primaryheader/Primaryheader.component';
 
+import { HomePageContainer } from './homepage.styles';
+
+// const HomePage=()=>(
+//     <div className='homepage'>
+//         <PrimaryHeader/>
+//         <Directory/>
+//     </div>
+// )
+
 const HomePage=()=>(
-    <div className='homepage'>
+    <HomePageContainer>
         <PrimaryHeader/>
         <Directory/>
-    </div>
-)
+    </HomePageContainer>
+);
 
 export default HomePage;

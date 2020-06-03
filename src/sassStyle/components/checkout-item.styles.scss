@@ -3,10 +3,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width:37.5em){
+        flex-direction: column;
+    }
     
     &__imageContainer{
         width: 25%;
         padding-right: 1.5rem;
+
+        @media screen and (max-width:37.5em){
+            width: 50%;
+            padding-right: 0;
+        }
 
         img{
             width: 90%;
@@ -19,9 +27,16 @@
     &__quantity,
     &__price{
         width: 22%;
+
+        @media screen and (max-width:37.5em){
+            width: 50%;
+            text-align: center;
+        }
     }
     &__quantity{
         display: flex;
+        align-items: center;
+        justify-content: center;
         &-arrow{
             cursor: pointer;
         }

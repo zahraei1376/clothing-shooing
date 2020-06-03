@@ -31,6 +31,12 @@ export const selectCollectionsForPreview =createSelector(
 export const selectCollection = collectionUrlparam =>(
     createSelector(
         [selectCollections],
-        collections => collections[collectionUrlparam]
+        // collections => collections[collectionUrlparam]
+        collections => (collections ? collections[collectionUrlparam] : null)
     )
+);
+
+export const selectIsCollectionFetching =createSelector(
+    [selectShop],
+    shop=>shop.isFetching
 )

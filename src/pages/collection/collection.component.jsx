@@ -6,7 +6,7 @@ import CollectionItem from '../../component/collectio-item/collection-item.compo
 import '../../sassStyle/pages/collection.styles.scss';
 
 const CollectionPage = ({ collection })=>{
-    const {title , items} = collection;
+    const { title , items} = collection;
     return(
     <div className='collectionPage'>
         <h2 className='collectionPage__title'>{title}</h2>

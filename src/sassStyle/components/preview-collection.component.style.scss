@@ -7,11 +7,23 @@
         &-title{
             font-size: 2.8rem;
             margin-bottom: 2.5rem;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
         }
 
         &-preview{
             display: flex;
             justify-content: space-between;
+
+            @media screen and (max-width:37.5em){
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1rem;
+                // display: flex;
+                // justify-content: center;
+                // flex-direction: column;
+            }
         }
     }
 

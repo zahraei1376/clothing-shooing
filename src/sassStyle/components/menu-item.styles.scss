@@ -66,4 +66,9 @@
         font-weight: lighter;
         font-size: 1.6rem;
     }
+
+    
+    @media screen and (max-width:37.5em){
+        width: 100%;
+    }
 }
