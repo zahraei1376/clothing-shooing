@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{lazy , Suspense} from 'react';
 import { Route} from 'react-router-dom';
 // import { connect } from 'react-redux';
 
@@ -10,11 +10,11 @@ import {fetchCollectionsStartAsync} from '../../redux/shop/shop.actions';
 // import ShopData from './shopData';
 // import CollectionPreview from '../../component/preview-collction/preview-collection.component';
 import Secondaryheader from '../../component/SecondaryNavigation/Secondaryheader.component';
-import CollectionOverview from '../../component/collection-overview/collecion-overview.component';
-import CollectionPage from '../../pages/collection/collection.component';
+// import CollectionOverview from '../../component/collection-overview/collecion-overview.component';
+// import CollectionPage from '../../pages/collection/collection.component';
 
 
-
+import Spinner from '../../component/spinner/spinner.component';
 import withSpinner from '../../component/with-spinner/with-spinner.components';
 import { render } from '@testing-library/react';
 import collecionOverviewComponent from '../../component/collection-overview/collecion-overview.component';
@@ -62,6 +62,9 @@ import collecionOverviewComponent from '../../component/collection-overview/coll
 // );
 // ////////////////////////////////////////////
 
+const CollectionOverview = lazy(() => import('../../component/collection-overview/collecion-overview.component'));
+const CollectionPage = lazy(()=>import('../../pages/collection/collection.component'));
+
 const CollectionOverviewWithSpinner = withSpinner(CollectionOverview)
 const CollectionPageWithSpinner = withSpinner(CollectionPage)
 
@@ -94,16 +97,18 @@ class ShopPage extends React.Component{
             
             <Secondaryheader/>
             <div className="shopPage">
-                {/* <Route exact path={`${match.path}`} component={CollectionOverview} /> */}
-                <Route exact path={`${match.path}`} render = {(props) => <CollectionOverviewWithSpinner isLoading={loading} {...props} />} />
-                {/* <Route path={`${match.path}/:collectionId`} component={CollectionPage} /> */}
-                <Route path={`${match.path}/:collectionId`} render = {(props)=><CollectionPageWithSpinner isLoading={loading} {...props} />} />
-                {/* ///////////////////////// */}
-                {/* <CollectionOverview/> */}
-                {/* ///////////////////////// */}
-                {/* {collections.map(({id, ...othercollectionprops})=>(
-                    <CollectionPreview key={id} {...othercollectionprops} />
-                ))} */}
+                <Suspense fallback={<Spinner/>}>
+                    {/* <Route exact path={`${match.path}`} component={CollectionOverview} /> */}
+                    <Route exact path={`${match.path}`} render = {(props) => <CollectionOverviewWithSpinner isLoading={loading} {...props} />} />
+                    {/* <Route path={`${match.path}/:collectionId`} component={CollectionPage} /> */}
+                    <Route path={`${match.path}/:collectionId`} render = {(props)=><CollectionPageWithSpinner isLoading={loading} {...props} />} />
+                    {/* ///////////////////////// */}
+                    {/* <CollectionOverview/> */}
+                    {/* ///////////////////////// */}
+                    {/* {collections.map(({id, ...othercollectionprops})=>(
+                        <CollectionPreview key={id} {...othercollectionprops} />
+                    ))} */}
+                </Suspense>
             </div>
         </div>)
     }

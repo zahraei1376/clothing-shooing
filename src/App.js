@@ -1,18 +1,22 @@
-import React from 'react';
+import React , {lazy ,Suspense} from 'react';
 import {GlobalStyle} from './global.styles';
 
 import {Switch,Route,Redirect} from 'react-router-dom';
-import {auth} from './firebase/firebase.utils';
 import {connect} from 'react-redux';
+// import { Helmet} from 'react-helmet';
 
-import HomePage from './pages/homepage.component';
-import ShopData from './pages/shop/shop.component';
-import SignInSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
-// import PrimaryHeader from './component/Primaryheader/Primaryheader.component';
+// import HomePage from './pages/homepage.component';
+// import ShopPage from './pages/shop/shop.component';
+// import SignInSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+// import CheckoutPage from './pages/checkout/checkout.component';
 import {setCurrentUser} from './redux/user/user.action';
-import CheckoutPage from './pages/checkout/checkout.component';
+import Spinner from './component/spinner/spinner.component';
+import ErrorBoundary from './component/error-boundary/error-boundary.component';
 
-
+const HomePage = lazy(() => import('./pages/homepage.component'));
+const ShopPage = lazy( ()=> import('./pages/shop/shop.component'));
+const SignInSignUp = lazy( ()=> import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component'));
+const CheckoutPage = lazy( ()=> import('./pages/checkout/checkout.component'));
 
 class App extends React.Component {
   constructor(props){
@@ -22,36 +26,37 @@ class App extends React.Component {
     }
   }
 
-  unsubscribeFromAuth=null;
-
-  componentDidMount(){
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user=>{
-      this.setState({currentUser:user});
-      console.log(user);
-    })
-  };
-
-  componentWillUnmount(){
-    this.unsubscribeFromAuth();
-  }
-
-
   render(){
+
     return (
       <div>
         <GlobalStyle/>
         {/* <PrimaryHeader /> */}
-        <Switch>
-          <Route exact path='/' component={HomePage}/>
-          <Route path='/shop' component={ShopData}/>
-          <Route exact path='/checkout' component={CheckoutPage} />
-          <Route exact path='/signin' render={()=>
-            this.props.currentUser ? (
-            <Redirect to='/'/>
-            ):(
-            <SignInSignUp />
-            )}/>
-        </Switch>
+        {/* <Helmet>
+            <meta charset="utf-8" />
+            <title>Zz CLOTHING</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="theme-color" content="#000000" />
+            <meta
+              name="description"
+              content="Website for online clothing sales"
+            />
+        </Helmet> */}
+        <ErrorBoundary>
+          <Switch>
+            <Suspense fallback={<Spinner/>}>
+              <Route exact path='/' component={HomePage}/>
+              <Route path='/shop' component={ShopPage}/>
+              <Route exact path='/checkout' component={CheckoutPage} />
+              <Route exact path='/signin' render={()=>
+                this.props.currentUser ? (
+                <Redirect to='/'/>
+                ):(
+                <SignInSignUp />
+                )}/>
+              </Suspense>
+          </Switch>
+        </ErrorBoundary>
       </div>
     );
   }
