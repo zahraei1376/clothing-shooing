@@ -8,17 +8,54 @@ import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store , persistor } from './redux/store';
+// /////////////////////////////////////////graphql
+// import { ApolloProvider } from 'react-apollo';
+// import { createHttpLink } from 'apollo-link-http';
+// import { InMemoryCache } from 'apollo-cache-inmemory'
+// import { ApolloClient ,gql } from 'apollo-boost';
+
+// const httpLink = createHttpLink({
+//   uri:''
+// });
+
+// const cache = new InMemoryCache();
+
+// const client = new ApolloClient({
+//   link:httpLink,
+//   cache
+// });
+
+// client.query({
+//   query:gql`
+//     {
+//       getCollectionsByTitle(title:"hats"){
+//         id
+//         title
+//         items{
+//           id
+//           name
+//           price
+//           imageUrl
+//         }
+//       }
+//     }
+//   `
+// }).then(Response=>console.log(Response));
+
+// //////////////////////////////////////////
 
 ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <BrowserRouter>
-        <PersistGate persistor={persistor} >
-          <App />
-        </PersistGate>
-      </BrowserRouter>
-    </React.StrictMode>
-  </Provider>,
+  // <ApolloProvider client={client}>
+    <Provider store={store}>
+      <React.StrictMode>
+        <BrowserRouter>
+          <PersistGate persistor={persistor} >
+            <App />
+          </PersistGate>
+        </BrowserRouter>
+      </React.StrictMode>
+    </Provider>,
+  // </ApolloProvider>,
   document.getElementById('root')
 );
 

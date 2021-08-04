@@ -39,8 +39,17 @@
         transition: transform .8s cubic-bezier(.54,.19,.3,.7);
         // transform: scale(60);
         @media screen and (max-width:60em){
-            position: fixed;
             right: 3rem;
+            top: 2rem;
+        }
+
+        @media screen and (max-width:960px){
+            // right: 2.6rem;
+            top: 3rem;
+        }
+
+        @media screen and (max-width:600px){
+            // right: 2.6rem;
             top: 2rem;
         }
     }

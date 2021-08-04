@@ -1,11 +1,11 @@
 @import '../abstracts/variables';
 
 .header{
+    width: 100%;
     display: flex;
     position: relative;
     
     &_logo {
-
         fill:$color-primary;
         position: absolute;
         top: 0;

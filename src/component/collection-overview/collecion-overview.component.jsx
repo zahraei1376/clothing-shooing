@@ -23,3 +23,15 @@ const mapStateToProps = createStructuredSelector({
 });
 
 export default connect(mapStateToProps)(CollectionOverview);
+
+// don't need  redux for use graphql
+
+// const CollectionOverview = ({ collections }) =>(
+//     <div className='CollectionOverview'>
+//         {collections.map(({id, ...othercollectionprops})=>(
+//             <CollectionPreview key={id} {...othercollectionprops} />
+//         ))}
+//     </div>
+// );
+
+// export default CollectionOverview;

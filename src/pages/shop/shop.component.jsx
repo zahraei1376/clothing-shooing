@@ -1,10 +1,12 @@
 import React ,{lazy , Suspense} from 'react';
 import { Route} from 'react-router-dom';
+import MySpinner from '../../component/MySpinner/MySpinner.component';
 // import { connect } from 'react-redux';
 
 import { createStructuredSelector } from 'reselect';
 import { selectIsCollectionFetching } from '../../redux/shop/shop.selector';
 import {fetchCollectionsStartAsync} from '../../redux/shop/shop.actions';
+
 
 // import { selectShopItems } from '../../redux/shop/shop.selector';
 // import ShopData from './shopData';
@@ -97,7 +99,7 @@ class ShopPage extends React.Component{
             
             <Secondaryheader/>
             <div className="shopPage">
-                <Suspense fallback={<Spinner/>}>
+                <Suspense fallback={<MySpinner/>}>
                     {/* <Route exact path={`${match.path}`} component={CollectionOverview} /> */}
                     <Route exact path={`${match.path}`} render = {(props) => <CollectionOverviewWithSpinner isLoading={loading} {...props} />} />
                     {/* <Route path={`${match.path}/:collectionId`} component={CollectionPage} /> */}

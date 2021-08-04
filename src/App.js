@@ -1,9 +1,10 @@
 import React , {lazy ,Suspense} from 'react';
 import {GlobalStyle} from './global.styles';
+import MySpinner  from './component/MySpinner/MySpinner.component';
 
 import {Switch,Route,Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
-// import { Helmet} from 'react-helmet';
+import { Helmet} from 'react-helmet';
 
 // import HomePage from './pages/homepage.component';
 // import ShopPage from './pages/shop/shop.component';
@@ -32,19 +33,20 @@ class App extends React.Component {
       <div>
         <GlobalStyle/>
         {/* <PrimaryHeader /> */}
-        {/* <Helmet>
+        <Helmet>
             <meta charset="utf-8" />
             <title>Zz CLOTHING</title>
+            {/* <link rel="canonical" href="http://mysite.com/example" /> */}
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="theme-color" content="#000000" />
             <meta
               name="description"
               content="Website for online clothing sales"
             />
-        </Helmet> */}
+        </Helmet>
         <ErrorBoundary>
           <Switch>
-            <Suspense fallback={<Spinner/>}>
+            <Suspense fallback={<MySpinner/>}>
               <Route exact path='/' component={HomePage}/>
               <Route path='/shop' component={ShopPage}/>
               <Route exact path='/checkout' component={CheckoutPage} />
