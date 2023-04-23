@@ -3,13 +3,15 @@
 .header {
     width: 100%;
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
     position: relative;
 
     &_logo {
         fill: $color-primary;
         position: absolute;
-        top: 0;
-        left: 3rem;
+        top: -1rem;
+        left: 1rem;
 
         @media screen and (max-width:37.5em) {
             position: absolute;
@@ -18,7 +20,7 @@
         }
 
         &-path {
-            transform: scale(2.5);
+            transform: scale(2);
         }
     }
 }
