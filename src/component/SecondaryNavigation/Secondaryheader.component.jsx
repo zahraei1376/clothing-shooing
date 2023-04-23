@@ -22,7 +22,6 @@ class Secondaryheader extends React.Component {
                 </Link>
                 <div className='header__options'>
                     <Link to='/shop' className='header__option'>shop</Link>
-                    <Link to='/shop' className='header__option'>contact</Link>
                     {
                         this.props.currentUser ?
                             <div className='header__option' onClick={() => auth.signOut()}>SIGN OUT</div>

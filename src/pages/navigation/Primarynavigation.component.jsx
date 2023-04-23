@@ -14,7 +14,6 @@ const Navigation = ({ currentUser }) => (
         <nav className='navigation__nav'>
             <ul className='navigation__list'>
                 <li className='navigation__item'><Link to='shop' className='navigation__link'>Shop</Link></li>
-                <li className='navigation__item'><Link to='shop' className='navigation__link'>contact</Link></li>
                 {
                     currentUser ?
                         <div className='navigation__item' onClick={() => auth.signOut()}>SIGN OUT</div>
