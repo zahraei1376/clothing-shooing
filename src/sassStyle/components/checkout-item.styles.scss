@@ -1,54 +1,59 @@
-.checkOutItem{
+.checkOutItem {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media screen and (max-width:37.5em){
+
+    @media screen and (max-width:37.5em) {
         flex-direction: column;
     }
-    
-    &__imageContainer{
+
+    &__imageContainer {
         width: 25%;
         padding-right: 1.5rem;
 
-        @media screen and (max-width:37.5em){
+        @media screen and (max-width:37.5em) {
             width: 50%;
             padding-right: 0;
         }
 
-        img{
+        img {
             width: 90%;
             height: 100%;
             padding: 1rem 1rem 1rem 0;
         }
 
     }
+
     &__name,
     &__quantity,
-    &__price{
+    &__price {
         width: 22%;
 
-        @media screen and (max-width:37.5em){
+        @media screen and (max-width:37.5em) {
             width: 50%;
             text-align: center;
         }
     }
-    &__quantity{
+
+    &__quantity {
         display: flex;
         align-items: center;
         justify-content: center;
-        &-arrow{
+
+        &-arrow {
             cursor: pointer;
         }
 
-        &-value{
+        &-value {
             margin: 0 1rem;
         }
     }
+
     // &__price{
 
     // }
-    &__removeButton{
+    &__removeButton {
         cursor: pointer;
     }
 }

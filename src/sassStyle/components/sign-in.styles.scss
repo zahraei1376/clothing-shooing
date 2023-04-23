@@ -1,20 +1,20 @@
-.sign-in{
-    width:35vw;
+.sign-in {
+    width: 35vw;
     display: flex;
     flex-direction: column;
     margin-right: 5rem;
 
-    &__title{
+    &__title {
         margin-top: 3rem;
         font-size: 1.4rem;
     }
 
-    &__subtitle{
+    &__subtitle {
         display: block;
         font-size: 1rem;
     }
 
-    & .buttons{
+    & .buttons {
         display: flex;
         justify-content: space-between;
         margin-top: 2rem;

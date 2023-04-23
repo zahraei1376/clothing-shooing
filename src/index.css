@@ -12,13 +12,6 @@ body{
     font-family: 'Open Sans Condensed', sans-serif;
     padding: 2rem 3rem;
 }
-/* body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Open Sans Condensed', sans-serif;
-  padding: 2rem 3rem;
-} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -1,23 +1,23 @@
 @import '../abstracts/variables';
 
-.header{
+.header {
     width: 100%;
     display: flex;
     position: relative;
-    
+
     &_logo {
-        fill:$color-primary;
+        fill: $color-primary;
         position: absolute;
         top: 0;
         left: 3rem;
 
-        @media screen and (max-width:37.5em){
+        @media screen and (max-width:37.5em) {
             position: absolute;
             top: 0;
             left: 0;
         }
 
-        &-path{
+        &-path {
             transform: scale(2.5);
         }
     }

@@ -1,20 +1,19 @@
-.Collection{
-    
-    &_item{
+.Collection {
+
+    &_item {
         position: relative;
         width: 20vw;
         display: flex;
         flex-direction: column;
         height: 20rem;
-        // height: 35rem;
         align-items: center;
 
-        @media screen and (max-width:37.5em){
+        @media screen and (max-width:37.5em) {
             width: 100%;
             margin-bottom: 3rem;
         }
 
-        &-img{
+        &-img {
             width: 100%;
             height: 95%;
             background-size: cover;
@@ -24,7 +23,7 @@
 
         }
 
-        &-footer{
+        &-footer {
 
             width: 100%;
             height: 5%;
@@ -32,27 +31,27 @@
             justify-content: center;
             font-size: 1.2rem;
 
-            &-name{
+            &-name {
                 width: 90%;
                 margin-bottom: 1.5rem;
             }
 
-            &-price{
+            &-price {
                 width: 10%;
             }
         }
 
-        & .btn{
+        & .btn {
             position: absolute;
             top: 75%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             opacity: 0.7;
             display: none;
             transition: all .3s;
             text-align: center;
 
-            @media screen and (max-width:37.5em){
+            @media screen and (max-width:37.5em) {
                 display: block;
                 opacity: 0.9;
                 min-width: unset;
@@ -60,12 +59,12 @@
             }
         }
 
-        &:hover .btn{
+        &:hover .btn {
             opacity: 0.85;
             display: flex;
         }
 
-        &:hover &-img{
+        &:hover &-img {
             filter: brightness(80%);
             // opacity: 0.8;
         }

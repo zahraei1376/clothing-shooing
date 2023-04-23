@@ -1,26 +1,24 @@
 @import '../abstracts/variables';
 
-.cardIcon{
+.cardIcon {
     position: relative;
     cursor: pointer;
 
-    &__container{
+    &__container {
         width: 2.25rem;
         height: 2.25rem;
 
-        &-icon{
-            // width: 2.25rem;
-            // height: 2.25rem;
+        &-icon {
             transform: scale(1.7);
             fill: $color-dark-dark-2;
         }
 
-        @media screen and (max-width:37.5em){
+        @media screen and (max-width:37.5em) {
             transform: scale(1);
         }
     }
 
-    &__itemCount{
+    &__itemCount {
         font-size: .8rem;
         height: 1.75rem;
         width: 1.75rem;

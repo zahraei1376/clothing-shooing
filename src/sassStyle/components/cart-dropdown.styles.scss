@@ -1,6 +1,6 @@
 @import '../abstracts/variables';
 
-.cart{
+.cart {
     position: absolute;
     top: 3rem;
     right: 1rem;
@@ -8,14 +8,14 @@
     width: 16rem;
     height: 24rem;
     border: 1px solid $color-dark-dark-2;
-    background-color:$color-dark-light-1 ;
+    background-color: $color-dark-light-1 ;
     display: flex;
     flex-direction: column;
     z-index: 5;
 
     transition: all .6s;
 
-    &__items{
+    &__items {
         height: 14rem;
         display: flex;
         flex-direction: column;
@@ -27,11 +27,11 @@
     // }
 }
 
-button{
+button {
     margin-top: auto;
 }
 
-.emptyMessage{
+.emptyMessage {
     font-size: 1.4rem;
     margin: 5rem auto;
 }

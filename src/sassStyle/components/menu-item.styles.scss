@@ -9,40 +9,40 @@
     margin: 0 .75rem 1.5rem;
     overflow: hidden;
 
-    &:hover{
+    &:hover {
         cursor: pointer;
 
-        & .background-image{
-           transform: scale(1.1);
-           transition: transform 6s  cubic-bezier(0.25 , 0.45 , 0.45 , 0.95) , opacity .5s;
+        & .background-image {
+            transform: scale(1.1);
+            transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95), opacity .5s;
         }
 
-        & .menu_item-content{
+        & .menu_item-content {
             opacity: 0.9;
         }
     }
 
-    & .background-image{
+    & .background-image {
         width: 100%;
         height: 100%;
         background-position: center;
         background-size: cover;
     }
 
-   &.large{
-       height: 38rem;
-   } 
+    &.large {
+        height: 38rem;
+    }
 
-    &:first-child{
+    &:first-child {
         margin-right: .75rem;
     }
 
-    &:last-child{
+    &:last-child {
         margin-left: .75rem;
     }
 
-    
-    &-content{
+
+    &-content {
         height: 9rem;
         padding: 0 2.5rem;
         border: 1px solid black;
@@ -55,20 +55,20 @@
         position: absolute;
     }
 
-    &-title{
+    &-title {
         font-weight: bold;
         margin-bottom: 6px;
         font-size: 2.2rem;
         color: #4a4a4a;
     }
 
-    &-subtitle{
+    &-subtitle {
         font-weight: lighter;
         font-size: 1.6rem;
     }
 
-    
-    @media screen and (max-width:37.5em){
+
+    @media screen and (max-width:37.5em) {
         width: 100%;
     }
 }

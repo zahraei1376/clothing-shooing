@@ -1,60 +1,62 @@
 @import '../../sassStyle/abstracts/variables';
 @import '../abstracts/mixin';
 
-.navigation{
-    &__checkbox{
+.navigation {
+    &__checkbox {
         display: none;
     }
 
-    &__btn{
+    &__btn {
         width: 3.5rem;
         height: 3.5rem;
         border-radius: 50%;
         position: fixed;
         right: 2.6rem;
         top: 2.6rem;
-        background-color:white;
+        background-color: white;
         box-shadow: 0 1rem 2rem rgba(#000, 0.5);
         z-index: 2000;
         outline: none;
         text-align: center;
         cursor: pointer;
-        @media screen and (max-width:37.5em){
+
+        @media screen and (max-width:37.5em) {
             position: fixed;
             right: 2.6rem;
             top: 1.6rem;
         }
     }
 
-    &__background{
+    &__background {
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
         position: fixed;
         right: 3rem;
         top: 3rem;
-        background-image: radial-gradient($color-primary-light,#EAB543);
+        background-image: radial-gradient($color-primary-light, #EAB543);
         z-index: 1000;
         outline: none;
-        transition: transform .8s cubic-bezier(.54,.19,.3,.7);
+        transition: transform .8s cubic-bezier(.54, .19, .3, .7);
+
         // transform: scale(60);
-        @media screen and (max-width:60em){
+        @media screen and (max-width:60em) {
             right: 3rem;
             top: 2rem;
         }
 
-        @media screen and (max-width:960px){
+        @media screen and (max-width:960px) {
             // right: 2.6rem;
             top: 3rem;
         }
 
-        @media screen and (max-width:600px){
+        @media screen and (max-width:600px) {
             // right: 2.6rem;
             top: 2rem;
         }
     }
 
-    &__nav{
+    &__nav {
         // width: 100%;
         height: 100%;
         // height: 100vh;
@@ -65,50 +67,52 @@
         // visibility: hidden;
         opacity: 0;
         width: 0;
-        transition: all .8s cubic-bezier(.54,.19,.3,.7);
+        transition: all .8s cubic-bezier(.54, .19, .3, .7);
     }
 
-    &__list{
+    &__list {
         @include cent;
         list-style: none;
         text-align: center;
         width: 100%;
     }
 
-    &__item{
+    &__item {
         margin: 1rem;
     }
 
-    &__link{
+    &__link {
+
         &:link,
-        &:visited{
+        &:visited {
             display: inline-block;
             text-decoration: none;
             text-transform: uppercase;
             font-size: 3rem;
             font-weight: 300;
-            padding:1rem 2rem;
+            padding: 1rem 2rem;
             background-image: linear-gradient(120deg, transparent 0%,
-            transparent 50%,white 50%);
+                    transparent 50%, white 50%);
             background-size: 240%;
             transition: all .4s;
             color: #fff;
         }
 
-        &:hover{
+        &:hover {
             background-position: 100%;
             color: #000;
-            transform:translateX(1rem);
+            transform: translateX(1rem);
         }
-        
+
     }
 
-    &__icon{
+    &__icon {
         position: relative;
         margin-top: 1.7rem;
+
         &,
         &::after,
-        &::before{
+        &::before {
             width: 1.5rem;
             height: 2px;
             background-color: #000;
@@ -116,49 +120,50 @@
         }
 
         &::after,
-        &::before{
-           content: "";
-           position: absolute;
-           left:0;
-           transition: all .2s;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
         }
 
-        &::before{
+        &::before {
             top: -.5rem;
         }
 
-        &::after{
+        &::after {
             top: .5rem;
         }
     }
-// ///////////////////
-    &__btn:hover &__icon::before{
+
+    // ///////////////////
+    &__btn:hover &__icon::before {
         top: -.6rem;
     }
 
-    &__btn:hover &__icon::after{
+    &__btn:hover &__icon::after {
         top: .6rem;
     }
 
-    &__checkbox:checked + &__btn &__icon{
+    &__checkbox:checked+&__btn &__icon {
         background-color: transparent;
     }
 
-    &__checkbox:checked + &__btn &__icon::after{
+    &__checkbox:checked+&__btn &__icon::after {
         top: 0;
         transform: rotate(-135deg);
     }
 
-    &__checkbox:checked + &__btn &__icon::before{
+    &__checkbox:checked+&__btn &__icon::before {
         top: 0;
         transform: rotate(135deg);
     }
 
-    &__checkbox:checked ~ &__background{
+    &__checkbox:checked~&__background {
         transform: scale(60);
     }
 
-    &__checkbox:checked ~ &__nav{
+    &__checkbox:checked~&__nav {
         opacity: 1;
         width: 100%;
     }

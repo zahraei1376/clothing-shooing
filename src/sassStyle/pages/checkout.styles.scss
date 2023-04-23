@@ -1,4 +1,4 @@
-.checkout{
+.checkout {
     width: 60%;
     min-height: 90vh;
     display: flex;
@@ -7,22 +7,15 @@
     margin: 5rem auto 0;
     font-size: 1.2rem;
 
-    &__header{
+    &__header {
         width: 100%;
         height: 4rem;
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid darkgray;
 
-        &-block{
-            // padding: 1rem;
+        &-block {
             text-transform: capitalize;
-            // width: 20%;
-            // text-align: center;
-
-            // &:last-child{
-            //     width: 2rem;
-            // }
         }
     }
 }

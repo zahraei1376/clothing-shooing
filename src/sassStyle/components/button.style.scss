@@ -1,8 +1,8 @@
-.btn{
+.btn {
     min-width: 10rem;
     width: auto;
     height: 4rem;
-    padding:0 1.5rem 0 1.5rem;
+    padding: 0 1.5rem 0 1.5rem;
     font-size: 1rem;
     text-transform: uppercase;
     font-family: inherit;
@@ -11,23 +11,23 @@
     align-items: center;
     cursor: pointer;
 
-    &-black{
+    &-black {
         color: white;
         background-color: black;
 
-        &:hover{
+        &:hover {
             color: black;
             background-color: white;
             border: 1px solid black;
         }
     }
 
-    
-    &-white{
+
+    &-white {
         color: black;
         background-color: white;
 
-        &:hover{
+        &:hover {
             color: white;
             background-color: black;
             border: none;

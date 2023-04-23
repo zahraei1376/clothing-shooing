@@ -1,23 +1,23 @@
-.collectionPage{
+.collectionPage {
 
     display: flex;
     flex-direction: column;
 
-    &__title{
+    &__title {
         font-size: 3rem;
         margin: 0 auto 3rem;
     }
 
-    &__items{
+    &__items {
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 1.5rem;
 
-        @media screen and (max-width:37.5em){
-            grid-template-columns: repeat(2,1fr);
+        @media screen and (max-width:37.5em) {
+            grid-template-columns: repeat(2, 1fr);
         }
 
-        & .Collection_item{
+        & .Collection_item {
             margin-bottom: 3rem;
         }
     }

@@ -1,46 +1,43 @@
 @import '../abstracts/variables';
 @import '../abstracts/mixin';
 
-.group{
+.group {
     position: relative;
     margin: 1rem 0;
-    &__input{
+
+    &__input {
         border: none;
         background: none;
-        // background-color: white;
         border-radius: 0;
         color: $color-dark-dark-1;
-        border-bottom:1px solid $color-dark-dark-2;
+        border-bottom: 1px solid $color-dark-dark-2;
         font-size: 1rem;
         font-weight: normal;
         padding: 1rem 1rem 1rem .5rem;
-        // display: block;
         width: 100%;
         margin: 25px 0;
 
-        &:focus{
+        &:focus {
             outline: none;
-            // padding: 0 2rem;
         }
     }
 
-    &__input:focus + &__lable{
+    &__input:focus+&__lable {
         @include shirink();
     }
 
 
-    &__lable{
+    &__lable {
         color: $color-dark-dark-1;
         font-size: 1rem;
         position: absolute;
         left: 5px;
-        // top: 2.7rem;
         top: 2.5rem;
         font-weight: normal;
         pointer-events: none;
         transition: all .3s;
 
-        & .shirink{
+        & .shirink {
             @include shirink();
         }
     }
