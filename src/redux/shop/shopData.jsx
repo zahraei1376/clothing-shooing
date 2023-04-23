@@ -1,5 +1,5 @@
-const ShopData={
-  hats:{
+const ShopData = {
+  hats: {
     id: 1,
     title: 'Hats',
     routeName: 'hats',
@@ -69,7 +69,7 @@ const ShopData={
       }
     ]
   },
-  sneakers:{
+  sneakers: {
     id: 2,
     title: 'Sneakers',
     routeName: 'sneakers',
@@ -107,7 +107,7 @@ const ShopData={
         name: 'Nike Red High Tops',
         // imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
         imageUrl: 'https://images.unsplash.com/photo-1521774971864-62e842046145?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-        price:160
+        price: 160
       },
       {
         id: 15,
@@ -132,7 +132,7 @@ const ShopData={
       }
     ]
   },
-  jackets:{
+  jackets: {
     id: 3,
     title: 'Jackets',
     routeName: 'jackets',
@@ -165,16 +165,16 @@ const ShopData={
         imageUrl: 'https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
         price: 165
       },
-      {
-        id: 22,
-        name: 'Tan Trench',
-        // imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
-        imageUrl: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-        price: 185
-      }
+      // {
+      //   id: 22,
+      //   name: 'Tan Trench',
+      //   // imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
+      //   imageUrl: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+      //   price: 185
+      // }
     ]
   },
-  womens:{
+  womens: {
     id: 4,
     title: 'Womens',
     routeName: 'womens',
@@ -198,7 +198,7 @@ const ShopData={
         name: 'Floral Dress',
         // imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
         imageUrl: 'https://images.unsplash.com/photo-1563801360261-e2f395a6da86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-        price:80
+        price: 80
       },
       {
         id: 26,
@@ -230,7 +230,7 @@ const ShopData={
       }
     ]
   },
-  mens:{
+  mens: {
     id: 5,
     title: 'Mens',
     routeName: 'mens',

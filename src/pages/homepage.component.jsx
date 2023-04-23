@@ -5,17 +5,10 @@ import PrimaryHeader from '../component/Primaryheader/Primaryheader.component';
 
 import { HomePageContainer } from './homepage.styles';
 
-// const HomePage=()=>(
-//     <div className='homepage'>
-//         <PrimaryHeader/>
-//         <Directory/>
-//     </div>
-// )
-
-const HomePage=()=>(
+const HomePage = () => (
     <HomePageContainer>
-        <PrimaryHeader/>
-        <Directory/>
+        <PrimaryHeader />
+        <Directory />
     </HomePageContainer>
 );
 
